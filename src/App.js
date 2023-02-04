@@ -6,23 +6,24 @@ import Section from './components/Section';
 export default class App extends React.Component{
 
   state = {
-    theme: 'dark'
-  }
-  switchTheme = () => {
-    this.setState(({theme})=>{
-
-      if(theme == 'dark') {
-        return {
-          theme :'light'
+    theme: 'dark',
+    switchTheme : () => {
+      this.setState(({theme})=>{
+  
+        if(theme == 'dark') {
+          return {
+            theme :'light'
+          }
         }
-      }
-      return {
-        theme : 'dark'
-      }
-    })
+        return {
+          theme : 'dark'
+        }
+      })
+    }
   }
+  
   render(){
-    const {theme} = this.state;
+    // const {theme,switchTheme} = this.state;
     return (
       <div>
         <Counter>
@@ -31,7 +32,7 @@ export default class App extends React.Component{
             <ClickCounter count={count} increamentCount={increamentCount}/>
             )}
         </Counter>
-        <ThemeContext.Provider value={{ theme:theme,switchTheme:this.switchTheme }}>
+        <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
        
