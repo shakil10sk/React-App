@@ -1,10 +1,21 @@
+import Counter from './components/Counter';
 import ClickCounter from './components/higerOrder/ClickCounter';
 import HoverCounter from './components/higerOrder/HoverCounter';
 function App() {
   return (
     <div>
-      <ClickCounter></ClickCounter>
-    <HoverCounter></HoverCounter>
+      <Counter>
+        {
+        (count,increamentCount) => (
+          <ClickCounter count={count} increamentCount={increamentCount}/>
+          )}
+      </Counter>
+      <Counter>
+        {
+        (count,increamentCount) => (
+          <HoverCounter count={count} increamentCount={increamentCount}/>
+          )}
+      </Counter>
     </div>
   );
 };
