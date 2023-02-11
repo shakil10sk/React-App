@@ -1,11 +1,10 @@
-import Time from "./refHooks/Time";
+import GetPost2 from "./useReducer/getPost2";
+
 function App(){
     
     return (
         <div className="app">
-            <div>
-                <Time/>
-            </div>
+            <GetPost2></GetPost2>
         </div>
     )
 }
