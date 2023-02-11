@@ -1,10 +1,10 @@
-import GetPost2 from "./useReducer/getPost2";
-
+import ComponentOne from "./customHooks/ComponentOne";
+import ComponentTwo from "./customHooks/ComponentTwo";
 function App(){
     
     return (
         <div className="app">
-            <GetPost2></GetPost2>
+            <ComponentTwo/>
         </div>
     )
 }
